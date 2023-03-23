@@ -1,0 +1,14 @@
+:root {
+  /* font sizes */
+  --size-sm: 0.875rem;
+  --size-md: 1rem;
+  --size-lg: 1.25rem;
+  --size-xl: 2rem;
+  --size-2xl: 4rem;
+
+  /* breakpoints */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1216px;
+  --breakpoint-wide: 1408px;
+}

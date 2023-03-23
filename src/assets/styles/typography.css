@@ -1,0 +1,15 @@
+@import './variables.css';
+
+h1 {
+  --size: var(--size-xl);
+  font-size: var(--size);
+  margin-top: calc(var(--size) * 0.125);
+  margin-bottom: calc(var(--size) * 0.875);
+}
+
+h2 {
+  --size: var(--size-lg);
+  font-size: var(--size);
+  margin-top: calc(var(--size) * 0.125);
+  margin-bottom: calc(var(--size) * 0.875);
+}

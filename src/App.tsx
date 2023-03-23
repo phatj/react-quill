@@ -1,8 +1,11 @@
+import { QuillEditor } from "./components/QuillEditor";
+
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <main>
+      <h1>React Quill Example</h1>
+      <QuillEditor />
+    </main>
   );
 }
 

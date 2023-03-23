@@ -1,0 +1,16 @@
+@import 'the-new-css-reset/css/reset.css';
+@import './typography.css';
+
+body {
+  background: #eee4da;
+  color: #121213f2;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0c1222;
+    color: #e8e6e3;
+  }
+}
