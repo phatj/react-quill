@@ -4,6 +4,7 @@
   --ql-stroke: var(--chakra-colors-chakra-body-text);
   --ql-stroke-hover: var(--chakra-colors-yellow-200);
   --ql-anchor: var(--chakra-colors-orange-500);
+  --ql-bg: var(--chakra-colors-chakra-body-bg);
   --ql-list-padding: 0.3rem;
 }
 
@@ -127,7 +128,7 @@
 
 /* picker */
 .ql-snow .ql-picker-options {
-  background-color: unset;
+  background-color: var(--ql-bg);
 }
 
 /* lists */
