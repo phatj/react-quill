@@ -14,8 +14,14 @@
   --breakpoint-desktop: 1216px;
   --breakpoint-wide: 1408px;
 
-
   /* colors */
-  --color-bg-dark: #0c1222;
-  --color-text-dark: #e8e6e3;
+  --colors-bg: #eee4da;
+  --colors-text: #121213f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --colors-bg: #0c1222;
+    --colors-text: #e8e6e3;
+  }
 }

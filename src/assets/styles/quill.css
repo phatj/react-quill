@@ -1,8 +1,8 @@
 @import "react-quill/dist/quill.snow.css";
-@import "./typography.css";
+@import './variables.css';
 
 :root {
-  --ql-stroke: #fff;
+  --ql-stroke: var(--colors-text);
   --ql-stroke-hover: yellow;
   --ql-anchor: orange;
   --ql-list-padding: 0.3rem;
@@ -128,7 +128,7 @@
 
 /* picker */
 .ql-snow .ql-picker-options {
-  background-color: var(--color-bg-dark);
+  background-color: var(--colors-bg);
 }
 
 /* lists */
