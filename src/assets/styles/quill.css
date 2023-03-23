@@ -1,16 +1,15 @@
 @import "react-quill/dist/quill.snow.css";
-@import './variables.css';
 
 :root {
-  --ql-stroke: var(--colors-text);
-  --ql-stroke-hover: yellow;
-  --ql-anchor: orange;
+  --ql-stroke: var(--chakra-colors-chakra-body-text);
+  --ql-stroke-hover: var(--chakra-colors-yellow-200);
+  --ql-anchor: var(--chakra-colors-orange-500);
   --ql-list-padding: 0.3rem;
 }
 
 /* fonts */
 .ql-container, .ql-toolbar.ql-snow {
-  font-family: var(--font-family);
+  font-family: var(--chakra-fonts-body);
   font-size: 1rem;
 }
 
@@ -128,7 +127,7 @@
 
 /* picker */
 .ql-snow .ql-picker-options {
-  background-color: var(--colors-bg);
+  background-color: unset;
 }
 
 /* lists */

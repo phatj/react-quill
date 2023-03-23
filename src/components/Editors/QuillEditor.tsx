@@ -1,7 +1,7 @@
 import { FC } from "react";
 import ReactQuill from "react-quill";
-import "../assets/styles/quill.css";
-import { useEditorOutput } from "../hooks";
+import "~/src/assets/styles/quill.css";
+import { useEditorOutput } from "~/src/hooks";
 
 export const QuillEditor: FC = () => {
   const [value, setValue] = useEditorOutput("quill");

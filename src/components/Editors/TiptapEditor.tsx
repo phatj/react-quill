@@ -2,7 +2,7 @@ import Link from "@tiptap/extension-link";
 import { Editor, EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { FC } from "react";
-import { useEditorOutput } from "../hooks";
+import { useEditorOutput } from "~/src/hooks";
 
 type ToolbarProps = {
   editor: Editor | null;
