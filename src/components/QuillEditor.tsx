@@ -7,7 +7,7 @@ export const QuillEditor: FC = () => {
   const [value, setValue] = useState("");
   const [debouncedValue, setDebouncedValue] = useState("");
 
-  const [, cancel] = useDebounce(
+  useDebounce(
     () => {
       setDebouncedValue(value);
     },
