@@ -1,4 +1,6 @@
 :root {
+  --font-family: 'Montserrat', sans-serif;
+
   /* font sizes */
   --size-sm: 0.875rem;
   --size-md: 1rem;
@@ -11,4 +13,9 @@
   --breakpoint-tablet: 1024px;
   --breakpoint-desktop: 1216px;
   --breakpoint-wide: 1408px;
+
+
+  /* colors */
+  --color-bg-dark: #0c1222;
+  --color-text-dark: #e8e6e3;
 }

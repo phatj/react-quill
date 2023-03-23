@@ -1,16 +1,17 @@
 @import 'the-new-css-reset/css/reset.css';
 @import './typography.css';
+@import './variables.css';
 
 body {
   background: #eee4da;
   color: #121213f2;
   padding: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-family);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #0c1222;
-    color: #e8e6e3;
+    background: var(--color-bg-dark);
+    color: var(--color-text-dark);
   }
 }

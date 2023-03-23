@@ -1,31 +1,20 @@
 @import "react-quill/dist/quill.snow.css";
+@import "./typography.css";
 
 :root {
   --ql-stroke: #fff;
-  --ql-stroke-hover: pink;
+  --ql-stroke-hover: yellow;
   --ql-anchor: orange;
+  --ql-list-padding: 0.3rem;
+}
+
+/* fonts */
+.ql-container, .ql-toolbar.ql-snow {
+  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
 /* stroke */
-/* @media (pointer: coarse) {
-  .ql-snow.ql-toolbar button:hover:not(.ql-active),
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) {
-    color: var(--ql-stroke);
-  }
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
-    fill: var(--ql-stroke);
-  }
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,
-  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,
-  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
-    stroke: var(--ql-stroke);
-  }
-} */
-
 .ql-snow .ql-stroke {
   stroke: var(--ql-stroke);
 }
@@ -136,3 +125,37 @@
 .ql-snow u {
   text-decoration: underline;
 }
+
+/* picker */
+.ql-snow .ql-picker-options {
+  background-color: var(--color-bg-dark);
+}
+
+/* lists */
+.ql-editor ol, .ql-editor ul {
+  margin-bottom: 1.5rem;
+}
+.ql-editor ol li:not(.ql-direction-rtl),
+.ql-editor ul li:not(.ql-direction-rtl) {
+  padding-left: var(--ql-list-padding);
+}
+.ql-editor ol li.ql-direction-rtl,
+.ql-editor ul li.ql-direction-rtl {
+  padding-right: var(--ql-list-padding);
+}
+
+/* bullets */
+.ql-editor li:not(.ql-direction-rtl)::before {
+  margin-left: -1.5rem;
+  margin-right: 0.3rem;
+  text-align: right;
+  line-height: 0;
+}
+.ql-editor ul > li::before {
+  width: 0;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  position: relative;
+  top: 3px;
+}
+
