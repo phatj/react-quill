@@ -1,23 +1,11 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { useDebounce } from "react-use";
+import { useEditorOutput } from "../hooks";
 
 export const QuillEditor: FC = () => {
-  const [value, setValue] = useState("");
-  const [debouncedValue, setDebouncedValue] = useState("");
-
-  useDebounce(
-    () => {
-      setDebouncedValue(value);
-    },
-    450,
-    [value]
-  );
-
-  useEffect(() => {
-    console.log(debouncedValue);
-  }, [debouncedValue]);
+  const [value, setValue] = useState("<p>Hello World!</p>");
+  useEditorOutput(value, "quill");
 
   return <ReactQuill theme="snow" value={value} onChange={setValue} />;
 };
