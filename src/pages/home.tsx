@@ -12,7 +12,7 @@ import { QuillEditor, TiptapEditor } from "../components/Editors";
 export const Home: FC = () => {
   return (
     <>
-      <Tabs>
+      <Tabs defaultIndex={1}>
         <TabList>
           <Tab>Quill</Tab>
           <Tab>Tiptap</Tab>
