@@ -44,7 +44,7 @@ export const ToolbarButton = forwardRef(
       return null;
     }
 
-    type Command = `toggle${ToggleCommands}`;
+    type Command = `toggle${C}`;
     const commandName = ("toggle" + capitalize(command)) as Command;
     const isActive = editor.isActive(lowerFirst(command), attrs(args));
 
