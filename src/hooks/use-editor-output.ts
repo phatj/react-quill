@@ -16,7 +16,7 @@ export function useEditorOutput(prefix = "output") {
 
   useEffect(() => {
     if (debouncedValue) {
-      console.log("[%s] => %s", prefix, debouncedValue);
+      console.debug("[%s] => %s", prefix, debouncedValue);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedValue]);

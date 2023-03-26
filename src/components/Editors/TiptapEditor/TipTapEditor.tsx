@@ -6,6 +6,8 @@ import StarterKit from "@tiptap/starter-kit";
 import { FC } from "react";
 import { useEditorOutput } from "~/src/hooks";
 import { EditorProvider } from "./EditorProvider";
+import { LinkBubbleMenu } from "./LinkBubbleMenu";
+import { MarkBubbleMenu } from "./MarkBubbleMenu";
 import { Toolbar } from "./Toolbar";
 
 export const TiptapEditor: FC = () => {
@@ -13,7 +15,13 @@ export const TiptapEditor: FC = () => {
   const styles = useMultiStyleConfig("Editor");
 
   const editor = useEditor({
-    extensions: [StarterKit, Link, Underline],
+    extensions: [
+      StarterKit,
+      Link.configure({
+        openOnClick: false,
+      }),
+      Underline,
+    ],
     content: value,
     onUpdate({ editor }) {
       setValue(editor.getHTML());
@@ -22,7 +30,12 @@ export const TiptapEditor: FC = () => {
 
   return (
     <EditorProvider editor={editor}>
+      {/* menus */}
       <Toolbar />
+      <LinkBubbleMenu />
+      <MarkBubbleMenu />
+
+      {/* editor */}
       <Box __css={styles.container}>
         <EditorContent editor={editor} tabIndex={-1} />
       </Box>

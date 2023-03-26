@@ -1,19 +1,21 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system";
+import {
+  createMultiStyleConfigHelpers,
+  defineStyle,
+} from "@chakra-ui/styled-system";
+import { mode } from "@chakra-ui/theme-tools";
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(["toolbar", "container"]);
 
-const common = definePartsStyle({
-  container: {
-    border: "1px",
-    px: "4",
-    py: "2",
-  },
+const commonContainer = defineStyle({
+  border: "1px",
+  px: "4",
+  py: "2",
 });
 
-const container = definePartsStyle({
-  container: {
-    ...common.container,
+const container = defineStyle((props) => {
+  return {
+    ...commonContainer,
     "h1,h2,h3": {
       mb: "0.25em",
       lineHeight: "1.2",
@@ -34,20 +36,24 @@ const container = definePartsStyle({
     "div[contenteditable]": {
       outline: "none",
     },
-  },
+    a: {
+      color: mode("blue.600", "cyan")(props),
+      textDecor: "underline",
+    },
+  };
 });
 
-const toolbar = definePartsStyle({
-  toolbar: {
-    ...common.container,
-    gap: "3",
-    borderBottom: "0",
-  },
+const toolbar = defineStyle({
+  ...commonContainer,
+  gap: "3",
+  borderBottom: "0",
 });
+
+const baseStyle = definePartsStyle((props) => ({
+  container: container(props),
+  toolbar,
+}));
 
 export const Editor = defineMultiStyleConfig({
-  baseStyle: {
-    ...container,
-    ...toolbar,
-  },
+  baseStyle,
 });
