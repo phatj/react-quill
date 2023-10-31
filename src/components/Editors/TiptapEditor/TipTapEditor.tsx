@@ -36,7 +36,7 @@ export const TiptapEditor: FC = () => {
       <MarkBubbleMenu />
 
       {/* editor */}
-      <Box __css={styles.container}>
+      <Box __css={styles.container} spellCheck="false">
         <EditorContent editor={editor} tabIndex={-1} />
       </Box>
     </EditorProvider>
