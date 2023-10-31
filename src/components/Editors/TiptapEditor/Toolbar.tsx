@@ -1,16 +1,10 @@
 import { HStack, useMultiStyleConfig } from "@chakra-ui/react";
 import {
-  IconBold,
   IconH1,
   IconH2,
   IconH3,
-  IconItalic,
-  IconLink,
   IconList,
   IconListNumbers,
-  IconStrikethrough,
-  IconUnderline,
-  IconUnlink,
 } from "@tabler/icons-react";
 import { FC } from "react";
 import { useEditorContext } from "./EditorProvider";

@@ -24,7 +24,7 @@ export const TiptapEditor: FC = () => {
     ],
     content: value,
     onUpdate({ editor }) {
-      setValue(editor.getHTML());
+      setValue(editor.getJSON());
     },
   });
 

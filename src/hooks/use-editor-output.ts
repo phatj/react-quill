@@ -3,7 +3,7 @@ import { useDebounce } from "react-use";
 import { jobDescription } from "../data/job-description";
 
 export function useEditorOutput(prefix = "output") {
-  const [value, setValue] = useState(jobDescription);
+  const [value, setValue] = useState<any>(jobDescription);
   const [debouncedValue, setDebouncedValue] = useState("");
 
   useDebounce(
@@ -16,7 +16,12 @@ export function useEditorOutput(prefix = "output") {
 
   useEffect(() => {
     if (debouncedValue) {
-      console.debug("[%s] => %s", prefix, debouncedValue);
+      console.debug(
+        "[%s] (length: %d) =>",
+        prefix,
+        JSON.stringify(debouncedValue).length,
+        debouncedValue
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedValue]);

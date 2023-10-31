@@ -6,5 +6,13 @@ import { useEditorOutput } from "~/src/hooks";
 export const QuillEditor: FC = () => {
   const [value, setValue] = useEditorOutput("quill");
 
-  return <ReactQuill theme="snow" value={value} onChange={setValue} />;
+  return (
+    <ReactQuill
+      theme="snow"
+      value={value}
+      onChange={(value, delta, source, editor) => {
+        setValue(editor.getContents());
+      }}
+    />
+  );
 };
